@@ -1,5 +1,3 @@
-// src/components/NavBar.js
-
 import React from "react";
 import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
@@ -12,15 +10,15 @@ const NavBar = () => {
   return (
     <Jumbotron>
     <div id="wrapper">
-    <div class="container">
-		<span class="react-logo">
-			<span class="nucleo"></span>
-		</span>
-   
-    </div>     
 
       {!isAuthenticated && (
         <span>
+        <div class="container">
+        <span class="react-logo">
+          <span class="nucleo"></span>
+        </span>
+      
+        </div>     
         <h1 class ="animated bounceInRight slow">Welcome</h1>
         <h2 class ="animated bounceInLeft slow">Log in to continue</h2>
         <button class ="animated jackInTheBox slow" id="login" onClick={() =>loginWithRedirect({})}>
@@ -32,7 +30,7 @@ const NavBar = () => {
       {isAuthenticated && <button class ="login" id="logout" onClick={() => logout()}>Log out</button>}
       {isAuthenticated && (
         <span>
-        <Link to="/">Home</Link>&nbsp;
+        <Link to="/posts">Home</Link>&nbsp;
         <Link to="/profile">Profile</Link>
       </span>
     )}
