@@ -32,6 +32,7 @@ const Header = () => {
         <span>
         <div id="authenticatedHeader">
         <button class ="login" id="logout" onClick={() => logout()}>Log out</button>
+        <Link to="/">Home</Link>&nbsp;
         <Link to="/posts">Discussions</Link>&nbsp;
         <Link to="/profile">Profile</Link>
         </div>
