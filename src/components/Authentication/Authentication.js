@@ -1,14 +1,14 @@
 import React from "react";
 import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
-import "./Header.css";
+import "./Authentication.css";
 import Jumbotron from "../Jumbotron/Jumbo";
 
-const Header = () => {
+const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
-    
+    <Jumbotron>
     <div id="wrapper">
 
       {!isAuthenticated && (
@@ -27,20 +27,16 @@ const Header = () => {
         </span>
       )}
 
-      
+      {isAuthenticated && <button class ="login" id="logout" onClick={() => logout()}>Log out</button>}
       {isAuthenticated && (
         <span>
-        <div id="authenticatedHeader">
-        <button class ="login" id="logout" onClick={() => logout()}>Log out</button>
-        <Link to="/">Home</Link>&nbsp;
         <Link to="/posts">Discussions</Link>&nbsp;
         <Link to="/profile">Profile</Link>
-        </div>
       </span>
     )}
     </div>
-    
+    </Jumbotron>
   );
 };
 
-export default Header;
+export default NavBar;
