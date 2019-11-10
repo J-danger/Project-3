@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Profile from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
 import Posts from "./pages/Posts"
+import Login from "./pages/Login"
 
 function App() {
   const { loading } = useAuth0();
@@ -20,10 +21,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">          
-        <NavBar />
-        <Switch>  
-       
-            <Route exact path="/" />
+        
+        <Switch>         
+            <Route exact path="/" component={Login}/>
             <PrivateRoute exact path="/profile"  component={Profile}  />
             <Route exact path="/posts"  component={Posts}  />
           </Switch>

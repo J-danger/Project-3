@@ -4,6 +4,7 @@ import { useAuth0 } from "../react-auth0-spa";
 import { Link } from "react-router-dom";
 
 import Jumbotron from "../components/Jumbotron/Jumbo";
+import Header from "../components/Header/Header"
 
 export function Posts ({ children }) {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
@@ -19,8 +20,9 @@ export function Posts ({ children }) {
       )}      
       {isAuthenticated && (
         <span>
+          <Header />
          <div className="list-overflow-container">
-           There will be a forum here with posts
+           There will be sortable list of discussions here
               <ul className="list-group">{children}</ul>
             </div>
       </span>
