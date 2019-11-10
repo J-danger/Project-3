@@ -1,13 +1,10 @@
 
 import React from "react";
 import { useAuth0 } from "../react-auth0-spa";
-import { Link } from "react-router-dom";
-
-import Jumbotron from "../components/Jumbotron/Jumbo";
 import NavBar from "../components/NavBar/NavBar"
 
 export function Posts ({ children }) {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated} = useAuth0();
 
   return (   
 
