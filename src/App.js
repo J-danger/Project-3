@@ -6,6 +6,7 @@ import { useAuth0 } from "./react-auth0-spa";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import PrivateRoute from "./components/PrivateRoute";
+import Posts from "./components/Posts/Posts"
 
 function App() {
   const { loading } = useAuth0();
@@ -21,6 +22,7 @@ function App() {
           <BrowserRouter>
         <header>
           <NavBar />
+          <Posts />
         </header>
         <Switch>
           <Route path="/" exact />
