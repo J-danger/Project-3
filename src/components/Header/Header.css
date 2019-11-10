@@ -1,0 +1,13 @@
+.login {
+    padding: 0px;
+    float: right;
+    background: black;
+    color: white;
+    box-shadow: none; 
+}
+
+#authenticatedHeader {
+    background: black;
+    margin-bottom: 20px;
+    padding: 20px;
+}
