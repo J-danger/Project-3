@@ -18,11 +18,11 @@ export function Login ({ children }) {
       )}      
       {isAuthenticated && (
         <span>
-        <NavBar/>   
-        <div className="list-overflow-container">
+        <NavBar/>  
+        
            There will be a list of top/stickied discussions here
-              <ul className="list-group">{children}</ul>
-        </div>    
+              
+        
       </span>
     )}
     </div>  
