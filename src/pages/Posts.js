@@ -1,32 +1,61 @@
-
-import React from "react";
-import { useAuth0 } from "../react-auth0-spa";
+import React, { Component } from "react";
+import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
+import { Input, TextArea, FormBtn } from "../components/Form/Form";
 
-export function Posts ({ children }) {
-  const { isAuthenticated} = useAuth0();
+class Posts extends Component {
+   state = {
+    posts: [],
+    title: "",
+    user: "",
+    body: ""
+   }
 
-  return (   
+    componentDidMount() {
+    this.loadPosts();
+  }
 
-    <div id="wrapper">
-     
-      {!isAuthenticated && (
+    loadPosts = () => {
+        API.getPosts()
+            .then(res =>
+                this.setState({posts: res.data, title: "", user: "", body: ""}))
+                .catch(err=> console.log(err))
+            };
+
+    handleInputChange = event => {
+        const {title, value} = event.target
+        this.setState({
+            title: value
+        });
+    }
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.title && this.state.body){
+            API.savePost({
+            title: this.state.title,
+            body: this.state.body, 
+            // this part might be wrong
+            user: this.state.user           
+            })
+        }
+    };
+
+    render() {
+        return(
           <span>
-           
-          </span>               
-      )}      
-      {isAuthenticated && (
-        <span>
           <NavBar />
          <div className="list-overflow-container">
            There will be sortable list of discussions here
-              <ul className="list-group">{children}</ul>
+              
+              <Input />
+              <TextArea />
+              <FormBtn />
             </div>
       </span>
-    )}
-    </div>  
-    
-  );
-};
+        )
+    }
+  }
 
-export default Posts;
+  export default Posts;
+

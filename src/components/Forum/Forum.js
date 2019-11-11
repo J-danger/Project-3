@@ -1,11 +1,11 @@
 
 import React from "react";
 import { useAuth0 } from "../react-auth0-spa";
-import Authentication from "../components/Authentication/Authentication"
 import NavBar from "../components/NavBar/NavBar"
+import { Input, TextArea, FormBtn } from "../components/Form/Form";
 
-export function Login ({ children }) {
-  const { isAuthenticated } = useAuth0();  
+export function Posts ({ children }) {
+  const { isAuthenticated} = useAuth0();
 
   return (   
 
@@ -13,16 +13,19 @@ export function Login ({ children }) {
      
       {!isAuthenticated && (
           <span>
-           <Authentication/>
+           
           </span>               
       )}      
       {isAuthenticated && (
         <span>
-        <NavBar/>   
-        <div className="list-overflow-container">
-           There will be a list of top/stickied discussions here
+          <NavBar />
+         <div className="list-overflow-container">
+           There will be sortable list of discussions here
               <ul className="list-group">{children}</ul>
-        </div>    
+              <Input />
+              <TextArea />
+              <FormBtn />
+            </div>
       </span>
     )}
     </div>  
@@ -30,4 +33,4 @@ export function Login ({ children }) {
   );
 };
 
-export default Login;
+export default Posts;
