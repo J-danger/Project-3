@@ -4,6 +4,16 @@ import "./Form.css"
 
 // This file exports the Input, TextArea, and FormBtn components
 
+export function UserName(props){
+  const { user } = useAuth0();
+  return(
+      <>
+     {user.name}
+     </>
+  
+  )
+}
+
 export function Input(props) {
   const { isAuthenticated } = useAuth0();
   return (

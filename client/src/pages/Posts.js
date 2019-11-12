@@ -3,16 +3,20 @@ import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
 import List from "../components/List/List.js"
 import ListItem from "../components/List/List.js"
-import User from "../components/User/User"
-import { Input, TextArea, FormBtn } from "../components/Form/Form";
+import { Input, TextArea, FormBtn, UserName } from "../components/Form/Form";
 import { Link } from "react-router-dom";
+
+console.log(UserName)
 
 class Posts extends Component {
    state = {
     posts: [],
     title: "",    
     body: "",  
+    user: "",
+    userId:""
    }
+   
 
     componentDidMount() {
     this.loadPosts();
@@ -35,10 +39,12 @@ class Posts extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
+        
         if (this.state.title && this.state.body){
             API.savePost({
             title: this.state.title,
             body: this.state.body, 
+            user: this.state.user
             // // this part might be wrong
             // user: this.state.user   
                  
@@ -46,6 +52,7 @@ class Posts extends Component {
             this.loadPosts()
         }
     };    
+  
 
     render() {
         return(
@@ -61,10 +68,16 @@ class Posts extends Component {
                         {post.title}  
                       </strong>
                     </Link>     
-                    <p><User/></p>               
+                                  
                   </ListItem>
                 ))}
               </List>
+              <UserName               
+                value={this.state.user.name}
+                onChange={this.handleInputChange}
+                name="user"
+                placeholder="Title (required)"
+              />
               <Input   
                 value={this.state.title}
                 onChange={this.handleInputChange}
@@ -81,10 +94,7 @@ class Posts extends Component {
                 disabled={!(this.state.title && this.state.body)}
                 onClick={this.handleFormSubmit}
                 />
-              {/* <div id="popup-container">
-              <button className="NewPost" onClick={this.togglePopup.bind(this)}>New Post</button>
-              {this.state.showPopup ? <Popup closePopup={this.togglePopup.bind(this)}/> : null}
-              </div> */}
+             
               </> 
             ) : (
               <h3>Loading...</h3>
