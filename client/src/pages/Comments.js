@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar/NavBar"
-
+import User from "../components/User/User"
 import API from "../utils/API";
 
 class Comments extends Component {
@@ -18,7 +18,7 @@ class Comments extends Component {
               <>   
               <NavBar />         
                 <h1>  
-                    {this.state.comment.title}
+                    {this.state.comment.title} 
                 </h1>    
                 <h2>
                     {this.state.comment.body}

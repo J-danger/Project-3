@@ -3,6 +3,7 @@ import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
 import List from "../components/List/List.js"
 import ListItem from "../components/List/List.js"
+import User from "../components/User/User"
 import { Input, TextArea, FormBtn } from "../components/Form/Form";
 import { Link } from "react-router-dom";
 
@@ -58,9 +59,10 @@ class Posts extends Component {
                   <ListItem key={post._id} data-attribute={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong>
-                        {post.title}
+                        {post.title}  
                       </strong>
-                    </Link>                    
+                    </Link>     
+                    <p><User/></p>               
                   </ListItem>
                 ))}
               </List>
