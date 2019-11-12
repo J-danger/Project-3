@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
-import { Input, TextArea, FormBtn } from "../components/Form/Form";
 import List from "../components/List/List.js"
 import ListItem from "../components/List/List.js"
-
+import { Input, TextArea, FormBtn } from "../components/Form/Form";
 import { Link } from "react-router-dom";
 
 class Posts extends Component {
@@ -12,7 +11,7 @@ class Posts extends Component {
     posts: [],
     title: "",
     user: "",
-    body: ""
+    body: "",  
    }
 
     componentDidMount() {
@@ -41,27 +40,51 @@ class Posts extends Component {
             title: this.state.title,
             body: this.state.body, 
             // // this part might be wrong
-            // user: this.state.user           
+            // user: this.state.user   
+                 
             })
+            this.loadPosts()
         }
-    };
+    };    
 
     render() {
         return(
           <>
         <NavBar/>            
             {this.state.posts.length ? (
+              <>
               <List>
                 {this.state.posts.map(post => (
-                  <ListItem key={post._id}>
+                  <ListItem key={post._id} data-attribute={post._id}>
                     <Link to={"/posts/" + post._id}>
                       <strong>
-                        {post.title} by {post.user}
+                        {post.title}
                       </strong>
                     </Link>                    
                   </ListItem>
                 ))}
               </List>
+              <Input   
+                value={this.state.title}
+                onChange={this.handleInputChange}
+                name="title"
+                placeholder="Title (required)"
+                />
+              <TextArea  
+                value={this.state.body}
+                onChange={this.handleInputChange}
+                name="body"
+                placeholder="What do you want to say? (required)"
+                />
+              <FormBtn 
+                disabled={!(this.state.title && this.state.body)}
+                onClick={this.handleFormSubmit}
+                />
+              {/* <div id="popup-container">
+              <button className="NewPost" onClick={this.togglePopup.bind(this)}>New Post</button>
+              {this.state.showPopup ? <Popup closePopup={this.togglePopup.bind(this)}/> : null}
+              </div> */}
+              </> 
             ) : (
               <h3>Loading...</h3>
             )}

@@ -5,3 +5,18 @@
 #formContainer {
     display: inline-block;
 }
+
+#submitPost {
+    box-shadow: 0 2px 2px black, 0 2px 2px black;   
+    padding: 5px;
+    font-size: 20px;
+}
+
+textarea {
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 500px;
+}

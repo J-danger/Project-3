@@ -1,0 +1,9 @@
+#NewPost-Button {
+    box-shadow: 0 2px 2px black, 0 2px 2px black; 
+    padding: 3px;     
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    float: right;
+    margin-bottom: 10px;
+}
