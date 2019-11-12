@@ -1,13 +1,53 @@
 .login {
-    padding: 0px;
+    padding: 5px;    
     float: right;
     background: black;
     color: white;
-    box-shadow: none; 
+    box-shadow: 0 2px 2px black, 0 2px 2px black;    
+    margin-right: 10px;
+    background: #00ACE9;
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+    
+}
+
+.login:hover{
+   background: #D43F3F;
+}
+
+#logButton {
+margin-bottom: 15px;
+
+}
+
+img{
+   
+}
+
+img:hover{
+    
+}
+
+
+
+.links {
+    color: white;
+    margin: 10px;
+    
+}
+
+.links:hover{
+    color: #00ACE9;
+    
 }
 
 #authenticatedHeader {
-    background: black;
+    background: #404040;
     margin-bottom: 20px;
     padding: 20px;
 }
+
+Link {
+    color: white;
+}
+

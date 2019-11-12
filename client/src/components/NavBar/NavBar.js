@@ -21,10 +21,14 @@ const Header = () => {
       {isAuthenticated && (
         <span>
         <div id="authenticatedHeader">
+          <div id="logButton">
         <button className ="login" id="logout" onClick={() => logout()}>Log out</button>
-        <Link to="/">Home</Link>&nbsp;
-        <Link to="/posts">Discussions</Link>&nbsp;
-        <Link to="/profile">Profile</Link>
+        </div>
+        <div id="links">
+        <Link to="/" className="links">Home</Link>&nbsp;
+        <Link to="/posts" className="links">Discussions</Link>&nbsp;
+        <Link to="/profile" className="links">Profile</Link>
+        </div>
         </div>
       </span>
     )}
