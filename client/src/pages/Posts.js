@@ -10,8 +10,7 @@ import { Link } from "react-router-dom";
 class Posts extends Component {
    state = {
     posts: [],
-    title: "",
-    user: "",
+    title: "",    
     body: "",  
    }
 

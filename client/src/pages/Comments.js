@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar/NavBar"
-import User from "../components/User/User"
+
 import API from "../utils/API";
 
 class Comments extends Component {

@@ -45,4 +45,17 @@
     color: white;
   }
 
+  .list-container {
+  border: solid white 1px;
+  
+  }
+
+  .list-group {
+    overflow: none;
+  }
+
+  #container {
+    overflow-X: sc
+  }
+
   
