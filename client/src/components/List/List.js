@@ -12,5 +12,5 @@ export default function List({ children }) {
 }
 
 export function ListItem({ children }) {
-  return <li className="list-group-item">{children}</li>;
+  return <li className="list-group-item" id="post">{children}</li>;
 }

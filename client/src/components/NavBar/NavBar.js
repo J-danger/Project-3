@@ -5,7 +5,7 @@ import "./NavBar.css";
 import Authentication from "../Authentication/Authentication"
 
 const Header = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, logout } = useAuth0();
 
   return (
     
@@ -24,11 +24,11 @@ const Header = () => {
           <div id="logButton">
         <button className ="login" id="logout" onClick={() => logout()}>Log out</button>
         </div>
-        <div id="links">
-        <Link to="/" className="links">Home</Link>&nbsp;
-        <Link to="/posts" className="links">Discussions</Link>&nbsp;
-        <Link to="/profile" className="links">Profile</Link>
-        </div>
+          <div id="links">
+            <Link to="/" className="links">Home</Link>&nbsp;
+            <Link to="/posts" className="links">Discussions</Link>&nbsp;
+            <Link to="/profile" className="links">Profile</Link>
+          </div>
         </div>
       </span>
     )}

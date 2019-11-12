@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
-import Forum from "../components/Forum/Forum"
 import { Input, TextArea, FormBtn } from "../components/Form/Form";
+import List from "../components/List/List.js"
+import ListItem from "../components/List/List.js"
+
+import { Link } from "react-router-dom";
 
 class Posts extends Component {
    state = {
@@ -46,24 +49,23 @@ class Posts extends Component {
     render() {
         return(
           <>
-        <NavBar/>
-         <Forum />         
-         <Input   
-          value={this.state.title}
-          onChange={this.handleInputChange}
-          name="title"
-          placeholder="Title (required)"/>
-         
-         <TextArea  
-          value={this.state.body}
-          onChange={this.handleInputChange}
-          name="body"
-          placeholder="What do you want to say? (required)"/>
-         <FormBtn 
-          disabled={!(this.state.title && this.state.body)}
-          onClick={this.handleFormSubmit}
-          />
-         </>
+        <NavBar/>            
+            {this.state.posts.length ? (
+              <List>
+                {this.state.posts.map(post => (
+                  <ListItem key={post._id}>
+                    <Link to={"/posts/" + post._id}>
+                      <strong>
+                        {post.title} by {post.user}
+                      </strong>
+                    </Link>                    
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>Loading...</h3>
+            )}
+             </>
          
         )
     }
