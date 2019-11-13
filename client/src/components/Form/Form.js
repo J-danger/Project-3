@@ -36,7 +36,7 @@ export function Input(props) {
   );
 }
 
-export function TextArea(props) {
+export function PostTextArea(props) {
   const { isAuthenticated } = useAuth0();
   return (
     <div className="formContainer">
@@ -46,6 +46,25 @@ export function TextArea(props) {
       {isAuthenticated &&
       <>
       <h3>Body</h3>
+    <div className="form-group">
+      <textarea className="form-control" rows="10" {...props} />
+    </div>
+    </>
+      
+      }
+    </div>
+  );
+}
+
+export function CommentTextArea(props) {
+  const { isAuthenticated } = useAuth0();
+  return (
+    <div className="formContainer">
+      {!isAuthenticated && 
+      <></>
+      }
+      {isAuthenticated &&
+      <>      
     <div className="form-group">
       <textarea className="form-control" rows="10" {...props} />
     </div>

@@ -23,6 +23,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
+    console.log(req.body)
     db.Post
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
@@ -34,5 +35,12 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  }, 
+  commentUpdate: function(req, res) {
+    console.log(req.params.id)
+    db.Post
+      .findOneAndUpdate({ _id: req.params.id }, {comment: req.body.comment})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 };

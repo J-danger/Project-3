@@ -13,4 +13,8 @@ router
   .put(postController.update)
   .delete(postController.remove);
 
+router
+  .route("/:id/comment")  
+  .put(postController.commentUpdate)
+
 module.exports = router;

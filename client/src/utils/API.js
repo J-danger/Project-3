@@ -15,6 +15,10 @@ export default {
     // Saves a book to the database
     savePost: function(postData) {
         return axios.post("/api/posts", postData);
+    },
+    // // Saves a book to the database
+    saveComment: function(id, postData) {
+        return axios.put(`/api/posts/${id}/comment`, postData);
     }
 
 }

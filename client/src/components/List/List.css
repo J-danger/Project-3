@@ -41,6 +41,10 @@
     color: white;
   }
 
+  a:hover {
+    color: #00ACE9;
+  }
+
   p {
     color: white;
   }
