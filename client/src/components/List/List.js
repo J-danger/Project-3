@@ -1,16 +1,31 @@
 import React from "react";
+import { useAuth0 } from "../../react-auth0-spa";
 import "./List.css";
 
 
 // This file exports both the List and ListItem components
 
 export default function List({ children }) {
+  const { isAuthenticated, logout } = useAuth0();
+
   return (
- 
-    <div className="list-container">
+<div id="wrapper">
+
+{!isAuthenticated && (  
+ <></>
+)}
+
+{isAuthenticated && (
+  <span>
+      <div className="list-container">
       <ul className="list-group">{children}</ul>
-    </div>
-  );
+      </div>
+      </span>
+      )}
+      </div>
+   
+    )
+  
 }
 
 export function ListItem({ children }) {
