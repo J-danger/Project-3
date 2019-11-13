@@ -72,13 +72,7 @@ class Posts extends Component {
                                   
                   </ListItem>
                 ))}
-              </List>
-              <UserName               
-                value={this.state.user.name}
-                onChange={this.handleInputChange}
-                name="user"
-                placeholder="Title (required)"
-              />
+              </List>             
               <Input   
                 value={this.state.title}
                 onChange={this.handleInputChange}
