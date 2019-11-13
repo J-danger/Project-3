@@ -3,7 +3,7 @@ import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
 import List from "../components/List/List.js"
 import ListItem from "../components/List/List.js"
-import { Input, TextArea, FormBtn, UserName } from "../components/Form/Form";
+import { Input, PostTextArea, FormBtn, UserName } from "../components/Form/Form";
 import { Link } from "react-router-dom";
 
 console.log(UserName)
@@ -12,14 +12,13 @@ class Posts extends Component {
    state = {
     posts: [],
     title: "",    
-    body: "",  
-    user: "",
-    userId:""
+    body: "",     
+    comment:[]
    }
    
 
     componentDidMount() {
-    this.loadPosts();
+    this.loadPosts();    
   }
 
     loadPosts = () => {
@@ -28,6 +27,7 @@ class Posts extends Component {
                 this.setState({posts: res.data, title: "", user: "", body: "", userId: ""}))
                 .catch(err=> console.log(err))
             };
+
 
     handleInputChange = event => {
         const {name, value} = event.target
@@ -44,7 +44,8 @@ class Posts extends Component {
             API.savePost({
             title: this.state.title,
             body: this.state.body, 
-            user: this.state.user
+            user: this.state.user,
+            comment: []
             // // this part might be wrong
             // user: this.state.user   
                  
@@ -84,7 +85,7 @@ class Posts extends Component {
                 name="title"
                 placeholder="Title (required)"
                 />
-              <TextArea  
+              <PostTextArea  
                 value={this.state.body}
                 onChange={this.handleInputChange}
                 name="body"
