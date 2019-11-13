@@ -13,20 +13,30 @@ const Profile = () => {
       <div>Loading...</div>
     );
   }
-
+  
   return (
-    <Fragment>
+    <>
       <NavBar />
       <div id="profileWrapper" className ="animated rotateInUpRight fast">
-      <img src={user.picture} id="UserImage" alt="Profile" height="200px" width="200px" className ="animated fadeInUp slow" />
-      <div id="userInfo" className ="animated fadeInRight slow">
+      <img src={user.picture} id="UserImage" alt="Profile" height="200px" width="200px" className ="animated fadeInUp slow" style={{borderRadius: "50%", border:"10px solid #070708"}} />
+      <div id="userInfo" className ="animated fadeInRight slow" >
       <h2>User Name: {user.name}</h2>
       <h3>Email: {user.email}</h3>      
       </div>
       </div>
+      </>
       
-    </Fragment>
-  );
+      
+  // <bio
+  // value={this.state.input}
+  // onChange={this.handleInputChange}
+  // name="bio"
+  // placeholder="Please enter a bio."
+  // />
+  )
 };
+  
+  
+  
 
 export default Profile;
