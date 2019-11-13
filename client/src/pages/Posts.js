@@ -25,7 +25,7 @@ class Posts extends Component {
     loadPosts = () => {
         API.getPosts()
             .then(res =>
-                this.setState({posts: res.data, title: "", user: "", body: ""}))
+                this.setState({posts: res.data, title: "", user: "", body: "", userId: ""}))
                 .catch(err=> console.log(err))
             };
 
@@ -63,10 +63,10 @@ class Posts extends Component {
               <List>
                 {this.state.posts.map(post => (
                   <ListItem key={post._id} data-attribute={post._id}>
-                    <Link to={"/posts/" + post._id}>
-                      <strong>
+                    <Link to={"/posts/" + post._id} style={{ textDecoration: 'none' }}>
+                       
                         {post.title}  
-                      </strong>
+                      
                     </Link>     
                                   
                   </ListItem>

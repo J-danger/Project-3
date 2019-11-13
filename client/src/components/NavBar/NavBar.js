@@ -3,6 +3,8 @@ import { useAuth0 } from "../../react-auth0-spa";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import Authentication from "../Authentication/Authentication"
+import User from "../User/User"
+import UserImage from "../UserImage/UserImage"
 
 const Header = () => {
   const { isAuthenticated, logout } = useAuth0();
@@ -22,8 +24,15 @@ const Header = () => {
         <span>
         <div id="authenticatedHeader">
           <div id="logButton">
-        <button className ="login" id="logout" onClick={() => logout()}>Log out</button>
-        </div>
+              <button className ="login" id="logout" onClick={() => logout()}>Log out</button>
+                <div id="userImage">
+                  <UserImage/>
+                </div>
+                <div id="user" className ="animated flipInX fast">        
+                  <User />
+                </div>
+              
+          </div>
           <div id="links">
             <Link to="/" className="links">Home</Link>&nbsp;
             <Link to="/posts" className="links">Discussions</Link>&nbsp;

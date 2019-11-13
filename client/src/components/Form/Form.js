@@ -8,7 +8,9 @@ export function UserName(props){
   const { user } = useAuth0();
   return(
       <>
-     {user.name}
+     <div className="form-group" {...props}>
+       
+     </div>
      </>
   
   )
