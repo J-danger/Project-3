@@ -19,6 +19,10 @@ export default {
     // // Saves a book to the database
     saveComment: function(id, postData) {
         return axios.put(`/api/posts/${id}/comment`, postData);
-    }
+    },
+
+    getComment: function(id) {
+        return axios.get(`/api/posts/${id}/comment`);
+    },
 
 }

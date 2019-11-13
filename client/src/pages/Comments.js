@@ -1,24 +1,29 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar/NavBar"
-import { Input, CommentTextArea, FormBtn, UserName } from "../components/Form/Form";
+import { CommentTextArea, FormBtn, UserName } from "../components/Form/Form";
 import API from "../utils/API";
+import CommentList from "../components/Thread/Thread.js"
+import CommentListItem from "../components/Thread/Thread.js"
 
 class Comments extends Component {
     state ={
-        comment: []
+        comment: [],
+        title:"",
+        body:""
+
     }
     
     componentDidMount() {
-        console.log(this.props.match.params.id)
+        
         API.getPost(this.props.match.params.id)       
-          .then(res => {console.log(res.data); this.setState({ comment: res.data.comment })})
+          .then(res => {console.log(res.data); this.setState({ comment: res.data.comment, title: res.data.title, body: res.data.body })})
           .catch(err => console.log(err));
       }
 
     loadComments = () => {
-    API.getPosts()
+    API.getComment()
         .then(res =>
-            this.setState({comment: res.data.comment}))
+            this.setState({comment: res.data.comment }))
             .catch(err=> console.log(err))
         };
 
@@ -46,15 +51,23 @@ class Comments extends Component {
       render(){
           return(
               <>   
-              <NavBar />         
-                <h1>  
-                    {this.state.comment} 
-                </h1>    
-                 
+              <NavBar />     
+                <h3>{this.state.title}</h3>
+                <p>{this.state.body}</p>
 
-                <div id="replies">
-                    This is where the replies will go
-                </div>              
+              <CommentList >
+                    {this.state.comment}
+              </CommentList>
+
+
+
+
+
+                {/* <div id="replies">
+                <CommentList />
+                <CommentListItem />
+                    
+                </div>               */}
                 <CommentTextArea
                 value={this.state.comment}
                 onChange={this.handleInputChange}
