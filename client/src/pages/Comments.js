@@ -21,7 +21,7 @@ class Comments extends Component {
       }
 
     loadComments = () => {
-    API.getPosts()
+    API.getComment()
         .then(res =>
             this.setState({comment: res.data.comment }))
             .catch(err=> console.log(err))
@@ -52,17 +52,22 @@ class Comments extends Component {
           return(
               <>   
               <NavBar />     
-                <h2>{this.state.title}</h2>
-                <h3>{this.state.body}</h3>
+                <h3>{this.state.title}</h3>
+                <p>{this.state.body}</p>
+
+              <CommentList >
+                    {this.state.comment}
+              </CommentList>
+
+
+
+
+
+                {/* <div id="replies">
                 <CommentList />
                 <CommentListItem />
-                <h1>  
-                
-                </h1>       
-
-                <div id="replies">
-                    This is where the replies will go
-                </div>              
+                    
+                </div>               */}
                 <CommentTextArea
                 value={this.state.comment}
                 onChange={this.handleInputChange}

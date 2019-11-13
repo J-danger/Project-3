@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth0 } from "../../react-auth0-spa";
+import"./Thread.css"
 
 
 
@@ -18,7 +19,7 @@ export default function CommentList({ children }) {
 {isAuthenticated && (
   <span>
       <div className="list-container">
-      <ul className="list-group">{children}</ul>
+      <ul className="list-group" >{children}</ul>
       </div>
       </span>
       )}
@@ -31,7 +32,7 @@ export default function CommentList({ children }) {
 export function CommentListItem({ children }) {
   return( 
     <div id="container">
-  <li className="list-group-item" id="post">{children} </li>
+  <li className="list-group-item" id="comment">{children} </li>
   </div>
   );
 }
