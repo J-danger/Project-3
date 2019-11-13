@@ -59,15 +59,6 @@ class Comments extends Component {
                     {this.state.comment}
               </CommentList>
 
-
-
-
-
-                {/* <div id="replies">
-                <CommentList />
-                <CommentListItem />
-                    
-                </div>               */}
                 <CommentTextArea
                 value={this.state.comment}
                 onChange={this.handleInputChange}
