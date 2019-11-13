@@ -14,30 +14,32 @@ const Header = () => {
     <div id="wrapper">
 
       {!isAuthenticated && (
-        <span>
+        
        <Authentication />
-        </span>
+       
       )}
 
       
       {isAuthenticated && (
         <span>
         <div id="authenticatedHeader">
-          <div id="logButton">
-              <button className ="login" id="logout" onClick={() => logout()}>Log out</button>
-                <div id="userImage">
-                  <UserImage/>
-                </div>
-                <div id="user" className ="animated flipInX fast">        
-                  <User />
-                </div>
-              
-          </div>
+         
+          <div id="container">
+            <button className ="logout" onClick={() => logout()}>Log out</button>            
+              <div id="userImage">
+                <UserImage/>
+              </div>
+              <div id="user" >        
+                <User />
+              </div>                         
           <div id="links">
             <Link to="/" className="links">Home</Link>&nbsp;
             <Link to="/posts" className="links">Discussions</Link>&nbsp;
             <Link to="/profile" className="links">Profile</Link>
           </div>
+            </div>
+          
+        
         </div>
       </span>
     )}
