@@ -59,6 +59,7 @@ class Comments extends Component {
               <NavBar />   
               {this.state.comment.length ? (  
                   <>
+                  
                 <div id="originalPost">
                 <div id="originalTitle">
                 <h3>{this.state.title}</h3>
@@ -67,7 +68,7 @@ class Comments extends Component {
                 <p>{this.state.body}</p>
                 </div>
                 </div>
-                <p>Replies</p>
+                
 
               <CommentList >
                  
@@ -80,7 +81,8 @@ class Comments extends Component {
                 
                       
               </CommentList>
-
+                <div id="postForm">
+                <div id="postContainer">
                 <CommentTextArea
                 value={this.state.cur_comment}
                 onChange={this.handleInputChange}
@@ -91,6 +93,8 @@ class Comments extends Component {
                 disabled={!(this.state.comment)}
                 onClick={this.handleFormSubmit}
                 />
+                </div>
+                </div>
                 </>
               ) : (
                 <h3>Loading...</h3>  
