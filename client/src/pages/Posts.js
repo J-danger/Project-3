@@ -26,6 +26,7 @@ class Posts extends Component {
             .then(res =>
                 this.setState({posts: res.data, title: "", user: "", body: "", userId: ""}))
                 .catch(err=> console.log(err))
+                // console.log(this.state.comment)
             };
 
 

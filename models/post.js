@@ -5,7 +5,10 @@ const postSchema = new Schema({
   title: { type: String, required: true },
   body: { type: String, required: true },
   user: String,  
-  comment: String
+ // comment: String,ORIGINAL
+  comment: [{
+    type: String
+  }] //TUTOR
 });
 
 const Post = mongoose.model("Post", postSchema);

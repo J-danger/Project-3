@@ -8,6 +8,7 @@ import CommentListItem from "../components/Thread/Thread.js"
 class Comments extends Component {
     state ={
         comment: [],
+        cur_comment: "", //tutor
         title:"",
         body:""
 
@@ -38,8 +39,10 @@ class Comments extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        
-        if (this.state.comment){
+        this.setState({
+            comment: this.state.comment.push(this.state.cur_comment)
+        })//tutor
+        if (this.state.cur_comment){ //tutor
             API.saveComment(this.props.match.params.id,{
             comment: this.state.comment          
                     
@@ -69,9 +72,11 @@ class Comments extends Component {
                     
                 </div>               */}
                 <CommentTextArea
-                value={this.state.comment}
+                // value={this.state.comment} original
+                value={this.state.cur_comment}//tutor
                 onChange={this.handleInputChange}
-                name="comment"
+                // name="comment" //original
+                name="cur_comment" //tutor
                 placeholder="Reply here"
                  />
                 <FormBtn 
