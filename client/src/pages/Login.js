@@ -3,6 +3,7 @@ import React from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import Authentication from "../components/Authentication/Authentication"
 import NavBar from "../components/NavBar/NavBar"
+import "./Login.css"
 
 export function Login ({ children }) {
   const { isAuthenticated } = useAuth0();  

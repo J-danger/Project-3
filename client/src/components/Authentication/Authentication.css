@@ -33,7 +33,7 @@ button:hover {
       width:250px;
       height:250px;
       margin:20px auto 0 auto;
-      background:#222;
+      background:black;
   
       display:flex;
       align-items: center;
@@ -43,8 +43,7 @@ button:hover {
     .react-logo{
       display: inline-block;
       border-radius:50%;
-      border:10px solid #00d8ff;
-  
+      border:10px solid #00d8ff;  
       animation-name:rotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
@@ -58,7 +57,7 @@ button:hover {
       width:200px;
       height:70px;
       border-radius:50%;
-      border:10px solid #00d8ff;
+      border:10px solid #ff0000;
     }
   
     .nucleo , .react-logo , .react-logo:before , .react-logo:after {
@@ -71,7 +70,7 @@ button:hover {
       width:40px;
       height:40px;
       border-radius:100%;
-      background:#00d8ff;
+      background:white;
     }
   
     .react-logo:before , .react-logo:after{
