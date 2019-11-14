@@ -18,7 +18,8 @@ export default function CommentList({ children }) {
 
 {isAuthenticated && (
   <span>
-      <div className="list-container">
+      <div className="thread-container">
+        
       <ul className="list-group" >{children}</ul>
       </div>
       </span>

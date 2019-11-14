@@ -1,0 +1,13 @@
+#originalPost {
+    background: #222831;
+    box-shadow: 0 3px 6px black, 0 3px 6px black; 
+    border: 1px #393e46 solid;
+}
+
+#originalTitle {
+    margin-left: 10px;
+}
+
+#originalBody {
+    margin-left: 10px;
+}

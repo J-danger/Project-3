@@ -4,6 +4,7 @@ import { CommentTextArea, FormBtn } from "../components/Form/Form";
 import API from "../utils/API";
 import CommentList from "../components/Thread/Thread.js"
 import CommentListItem from "../components/Thread/Thread.js"
+import  "./Comments.css"
 
 class Comments extends Component {
     state ={
@@ -58,8 +59,14 @@ class Comments extends Component {
               <NavBar />   
               {this.state.comment.length ? (  
                   <>
+                <div id="originalPost">
+                <div id="originalTitle">
                 <h3>{this.state.title}</h3>
+                </div>
+                <div id="originalBody">
                 <p>{this.state.body}</p>
+                </div>
+                </div>
                 <p>Replies</p>
 
               <CommentList >

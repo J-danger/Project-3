@@ -5,8 +5,9 @@ import List from "../components/List/List.js"
 import ListItem from "../components/List/List.js"
 import { Input, PostTextArea, FormBtn, UserName } from "../components/Form/Form";
 import { Link } from "react-router-dom";
+import "./Posts.css"
 
-console.log(UserName)
+
 
 class Posts extends Component {
    state = {
@@ -71,7 +72,9 @@ class Posts extends Component {
                                   
                   </ListItem>
                 ))}
-              </List>             
+              </List>   
+              <div id="postForm">  
+              <div id="postContainer">
               <Input   
                 value={this.state.title}
                 onChange={this.handleInputChange}
@@ -88,7 +91,8 @@ class Posts extends Component {
                 disabled={!(this.state.title && this.state.body)}
                 onClick={this.handleFormSubmit}
                 />
-             
+                </div>   
+             </div>   
               </> 
             ) : (
               <h3>Loading...</h3>

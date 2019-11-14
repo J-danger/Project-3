@@ -1,0 +1,12 @@
+#postForm {
+    margin-top: 30px;
+    box-shadow: 0 3px 6px black, 0 3px 6px black; 
+    border: 1px #393e46 solid;
+    background: #26282b;
+    width: 30%  
+}
+
+#postContainer:not(h3) {
+    margin-left: 20px;
+}
+

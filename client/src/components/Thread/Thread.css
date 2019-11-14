@@ -1,4 +1,7 @@
-.list-container {
+.thread-container {
     color: white;
     margin-bottom: 20px;
+    box-shadow: 0 3px 6px black, 0 3px 6px black; 
+    border: 1px #393e46 solid;
+    background: #222831;
 }
