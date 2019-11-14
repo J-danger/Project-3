@@ -33,9 +33,9 @@ const Header = () => {
                 <User />
               </div>                         
           <div id="links">
-            <Link to="/" className="links">Home</Link>&nbsp;
-            <Link to="/posts" className="links">Discussions</Link>&nbsp;
-            <Link to="/profile" className="links">Profile</Link>
+            <Link to="/" className="links" activeClassName="active">Home</Link>&nbsp;
+            <Link to="/posts" className="links" activeClassName="active">Discussions</Link>&nbsp;
+            <Link to="/profile" className="links" activeClassName="active">Profile</Link>
           </div>
             </div>
           

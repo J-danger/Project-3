@@ -20,7 +20,7 @@
 }
 
 .links {
-    color: #d1d4c9;
+    color: white;
     margin: 10px; 
     font-weight: bold;
     float: left;
@@ -42,9 +42,6 @@
  a {
     text-decoration: none;
  }
-
-
-
 
 #user {
     float: right;
