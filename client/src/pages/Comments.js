@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar/NavBar"
-import { CommentTextArea, FormBtn, UserName } from "../components/Form/Form";
+import { CommentTextArea, FormBtn } from "../components/Form/Form";
 import API from "../utils/API";
 import CommentList from "../components/Thread/Thread.js"
 import CommentListItem from "../components/Thread/Thread.js"
@@ -8,7 +8,7 @@ import CommentListItem from "../components/Thread/Thread.js"
 class Comments extends Component {
     state ={
         comment: [],
-        cur_comment: "", //tutor
+        cur_comment: "",
         title:"",
         body:""
 
@@ -22,9 +22,11 @@ class Comments extends Component {
       }
 
     loadComments = () => {
-    API.getComment()
+    API.getComment(this.props.match.params.id)
         .then(res =>
-            this.setState({comment: res.data.comment }))
+            this.setState({comment: res.data.comment })
+            
+            )
             .catch(err=> console.log(err))
         };
 
@@ -39,42 +41,54 @@ class Comments extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        this.setState({
-            comment: this.state.comment.push(this.state.cur_comment)
-        })//tutor
-        if (this.state.cur_comment){ //tutor
-            API.saveComment(this.props.match.params.id,{
-            comment: this.state.comment          
-                    
-            })
-            this.loadComments()
-        }
+       this.setState({
+           comment: this.state.comment.push(this.state.cur_comment)
+       })
+       if (this.state.cur_comment){ 
+           API.saveComment(this.props.match.params.id,{
+           comment: this.state.comment
+           })
+           this.loadComments()
+       }
     };   
 
       render(){
           return(
               <>   
-              <NavBar />     
+              <NavBar />   
+              {this.state.comment.length ? (  
+                  <>
                 <h3>{this.state.title}</h3>
                 <p>{this.state.body}</p>
+                <p>Replies</p>
 
               <CommentList >
-                    {this.state.comment}
+                 
+              {this.state.comment.map(comment => (
+                  <CommentListItem key={comment._id} data-attribute={comment._id}>                   
+                       {comment}
+                  </CommentListItem>
+                ))}
+                    
+                
+                      
               </CommentList>
 
                 <CommentTextArea
-                // value={this.state.comment} original
-                value={this.state.cur_comment}//tutor
+                value={this.state.cur_comment}
                 onChange={this.handleInputChange}
-                // name="comment" //original
-                name="cur_comment" //tutor
+                name="cur_comment"
                 placeholder="Reply here"
                  />
                 <FormBtn 
                 disabled={!(this.state.comment)}
                 onClick={this.handleFormSubmit}
                 />
-          </>
+                </>
+              ) : (
+                <h3>Loading...</h3>  
+              )}
+            </>
           )
       }
 }
