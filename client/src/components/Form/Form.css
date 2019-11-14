@@ -20,3 +20,10 @@ textarea {
 input {
     width: 400px;
 }
+
+#submitPost {
+    background: grey;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+}

@@ -33,7 +33,7 @@ const Header = () => {
                 <User />
               </div>                         
           <div id="links">
-            <Link to="/" className="links">Test</Link>&nbsp;
+            <Link to="/" className="links">Home</Link>&nbsp;
             <Link to="/posts" className="links">Discussions</Link>&nbsp;
             <Link to="/profile" className="links">Profile</Link>
           </div>

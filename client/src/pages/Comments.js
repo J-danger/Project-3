@@ -58,6 +58,7 @@ class Comments extends Component {
           return(
               <>   
               <NavBar />   
+              
               {true ? (  
                   <>
                  
@@ -69,6 +70,7 @@ class Comments extends Component {
                 <p>{this.state.body}</p>
                 </div>
                 </div>
+                <h3>Replies</h3>
                 {this.state.comment.length ? ( 
                   <CommentList >                 
                  {this.state.comment.map(comment => (

@@ -58,7 +58,8 @@ class Posts extends Component {
     render() {
         return(
           <>
-        <NavBar/>            
+        <NavBar/>  
+        <h3>Current Discussions</h3>          
             {this.state.posts.length ? (
               <>
               <List>

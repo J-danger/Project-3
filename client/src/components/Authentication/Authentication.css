@@ -17,12 +17,13 @@ button {
     border: #00d8ff;
     font-family: fantasy;
     font-size: 25px;
-    box-shadow: 0 3px 6px #00d8ff, 0 3px 6px #00d8ff; 
-    background: white;
+    box-shadow: 0 3px 6px #ff0000, 0 3px 6px #ff0000; 
+    background: #ff0000;
 }
 
 button:hover {
-    background:#00d8ff;    
+    background:white;   
+    color: #ff0000; 
     
 }
 
