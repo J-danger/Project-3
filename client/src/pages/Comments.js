@@ -89,7 +89,8 @@ class Comments extends Component {
                 value={this.state.cur_comment}                
                 onChange={this.handleInputChange}
                 name="cur_comment"
-                placeholder="Reply here"
+                placeholder=""
+                returnKeyType="go"
                  />
                 <FormBtn 
                 disabled={!(this.state.comment)}

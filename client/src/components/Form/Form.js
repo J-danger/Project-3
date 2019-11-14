@@ -1,4 +1,6 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 import { useAuth0 } from "../../react-auth0-spa";
 import "./Form.css"
 
@@ -16,8 +18,41 @@ export function UserName(props){
   )
 }
 
+const useStyles = makeStyles(theme => ({
+  root: {   
+    '& label': {
+      color: 'white',
+    },   
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'red',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'red',
+      },
+      '&:hover fieldset': {
+        borderColor: 'blue',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'red',
+      },     
+    },
+  },
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 400,
+    
+  },
+}));
+
 export function Input(props) {
   const { isAuthenticated } = useAuth0();
+  var classes = useStyles();
   return (
     <div className="formContainer">
     {!isAuthenticated &&
@@ -25,9 +60,15 @@ export function Input(props) {
     }
     {isAuthenticated && 
      <>
-     <h3>Title</h3>
-     <div className="form-group">
-       <input className="form-control" {...props} />
+     
+     <div className="form-group">    
+       <TextField 
+       className={classes.root} 
+       id="standard-error" 
+       label="Title" 
+       color="secondary"        
+       {...props} 
+       />
      </div>
      </>
     }
@@ -38,18 +79,28 @@ export function Input(props) {
 
 export function PostTextArea(props) {
   const { isAuthenticated } = useAuth0();
+  const classes = useStyles();
   return (
     <div className="formContainer">
       {!isAuthenticated && 
       <></>
       }
       {isAuthenticated &&
-      <>
-      <h3>Body</h3>
-    <div className="form-group">
-      <textarea className="form-control" rows="10" {...props} />
-    </div>
-    </>
+      <div>       
+      <form className={classes.root} id="textForm" noValidate autoComplete="off">
+        <TextField 
+          id="standard-error"
+          label="Body"
+          multiline
+          rows="10"         
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"  
+          
+          {...props} 
+          />     
+      </form>
+      </div>
       
       }
     </div>
@@ -58,6 +109,7 @@ export function PostTextArea(props) {
 
 export function CommentTextArea(props) {
   const { isAuthenticated } = useAuth0();
+ 
   return (
     <div className="formContainer">
       {!isAuthenticated && 
@@ -66,7 +118,12 @@ export function CommentTextArea(props) {
       {isAuthenticated &&
       <>      
     <div className="form-group">
-      <textarea className="form-control" rows="10" wrap="off"  {...props} />     
+      <textarea 
+      className="form-control" 
+      rows="10" 
+      wrap="off" 
+      {...props} 
+      />   
 
       
     </div>

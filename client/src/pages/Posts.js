@@ -76,18 +76,22 @@ class Posts extends Component {
               </List>   
               <div id="postForm" className ="animated fadeInUp fast">  
               <div id="postContainer">
+              <div id="Input">
               <Input   
                 value={this.state.title}
                 onChange={this.handleInputChange}
                 name="title"
-                placeholder="Title (required)"
+                placeholder=""
                 />
+                </div>
+                <div id="PostTextArea">
               <PostTextArea  
                 value={this.state.body}
                 onChange={this.handleInputChange}
                 name="body"
-                placeholder="What do you want to say? (required)"
+                placeholder=""
                 />
+                </div>
               <FormBtn 
                 disabled={!(this.state.title && this.state.body)}
                 onClick={this.handleFormSubmit}

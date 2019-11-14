@@ -28,9 +28,10 @@ input {
     font-size: 15px;
 }
 
-textarea {
-    outline: none;
-    resize: none;
-    overflow: auto;
-    white-space: pre-line;
+#standard-secondary{
+    margin-bottom: 10px;
+}
+
+#textField {
+    margin-top: 10px;
 }

@@ -10,7 +10,9 @@ export default function CommentList({ children }) {
   const { isAuthenticated } = useAuth0();
 
   return (
-<div id="wrapper"  className ="animated fadeInRight fast">
+
+    
+<div id="wrapper"  className ="animated flipInY fast">
 
 {!isAuthenticated && (  
  <></>
