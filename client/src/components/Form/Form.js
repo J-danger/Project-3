@@ -66,7 +66,9 @@ export function CommentTextArea(props) {
       {isAuthenticated &&
       <>      
     <div className="form-group">
-      <textarea className="form-control" rows="10" {...props} />
+      <textarea className="form-control" rows="10" wrap="off"  {...props} />     
+
+      
     </div>
     </>
       
@@ -83,9 +85,11 @@ export function FormBtn(props) {
       <></>
       }
       {isAuthenticated &&
+     
       <button id="submitPost" {...props} style={{ float: "none", marginBottom: 10 }} className="btn btn-success" >
         Submit
       </button>
+     
       
 
       }

@@ -3,7 +3,7 @@ import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
 import List from "../components/List/List.js"
 import ListItem from "../components/List/List.js"
-import { Input, PostTextArea, FormBtn, UserName } from "../components/Form/Form";
+import { Input, PostTextArea, FormBtn } from "../components/Form/Form";
 import { Link } from "react-router-dom";
 import "./Posts.css"
 

@@ -27,3 +27,10 @@ input {
     font-family: sans-serif;
     font-size: 15px;
 }
+
+textarea {
+    outline: none;
+    resize: none;
+    overflow: auto;
+    white-space: pre-line;
+}

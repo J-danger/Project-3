@@ -74,7 +74,7 @@ class Comments extends Component {
                 {this.state.comment.length ? ( 
                   <CommentList >                 
                  {this.state.comment.map(comment => (
-                     <CommentListItem key={comment._id} data-attribute={comment._id}>                   
+                     <CommentListItem key={comment._id} data-attribute={comment._id}>                                        
                           {comment}
                      </CommentListItem>
                    ))}
@@ -82,16 +82,11 @@ class Comments extends Component {
                    ) : (
                      <p>Be the first to comment!</p>
                    )}
-                
-
-            
-                    
-                
-                      
+                   
                 <div id="postForm" className ="animated fadeInUp fast">
                 <div id="postContainer">
                 <CommentTextArea
-                value={this.state.cur_comment}
+                value={this.state.cur_comment}                
                 onChange={this.handleInputChange}
                 name="cur_comment"
                 placeholder="Reply here"

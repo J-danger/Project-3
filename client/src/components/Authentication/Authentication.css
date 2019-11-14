@@ -62,7 +62,7 @@ button:hover {
       width:200px;
       height:70px;
       border-radius:50%;
-      border:10px solid #ff0000;
+      border:10px solid white;
     }
   
     .nucleo , .react-logo , .react-logo:before , .react-logo:after {
@@ -75,7 +75,7 @@ button:hover {
       width:40px;
       height:40px;
       border-radius:100%;
-      background:white;
+      background:red;
     }
   
     .react-logo:before , .react-logo:after{

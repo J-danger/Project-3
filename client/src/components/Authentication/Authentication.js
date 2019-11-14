@@ -19,7 +19,7 @@ const NavBar = () => {
         </span>
       
         </div>     
-        <h1 className ="animated bounceInRight slow">Welcome</h1>
+        <h1 className ="animated bounceInRight slow">Welcome to Stackunderflow</h1>
         <h2 className ="animated bounceInLeft slow">Log in to continue</h2>
         <button className ="animated jackInTheBox slow" id="login" onClick={() =>loginWithRedirect({})}>
           Log in
