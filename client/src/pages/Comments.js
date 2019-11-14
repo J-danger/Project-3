@@ -50,6 +50,7 @@ class Comments extends Component {
            comment: this.state.comment
            })
            this.loadComments()
+           
        }
     };   
 
@@ -57,9 +58,9 @@ class Comments extends Component {
           return(
               <>   
               <NavBar />   
-              {this.state.comment.length ? (  
+              {true ? (  
                   <>
-                  
+                 
                 <div id="originalPost">
                 <div id="originalTitle">
                 <h3>{this.state.title}</h3>
@@ -68,19 +69,23 @@ class Comments extends Component {
                 <p>{this.state.body}</p>
                 </div>
                 </div>
+                {this.state.comment.length ? ( 
+                  <CommentList >                 
+                 {this.state.comment.map(comment => (
+                     <CommentListItem key={comment._id} data-attribute={comment._id}>                   
+                          {comment}
+                     </CommentListItem>
+                   ))}
+                   </CommentList>
+                   ) : (
+                     <p>Be the first to comment!</p>
+                   )}
                 
 
-              <CommentList >
-                 
-              {this.state.comment.map(comment => (
-                  <CommentListItem key={comment._id} data-attribute={comment._id}>                   
-                       {comment}
-                  </CommentListItem>
-                ))}
+            
                     
                 
                       
-              </CommentList>
                 <div id="postForm">
                 <div id="postContainer">
                 <CommentTextArea

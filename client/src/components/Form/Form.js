@@ -83,9 +83,10 @@ export function FormBtn(props) {
       <></>
       }
       {isAuthenticated &&
-      <button id="submitPost" {...props} style={{ float: "none", marginBottom: 10 }} className="btn btn-success">
+      <button id="submitPost" {...props} style={{ float: "none", marginBottom: 10 }} className="btn btn-success" >
         Submit
       </button>
+      
 
       }
     </div>
