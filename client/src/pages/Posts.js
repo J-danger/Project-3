@@ -6,6 +6,8 @@ import ListItem from "../components/List/List.js"
 import { Input, PostTextArea, FormBtn } from "../components/Form/Form";
 import { Link } from "react-router-dom";
 import "./Posts.css"
+import loading_gif from "../loading.gif"
+
 
 
 
@@ -94,11 +96,11 @@ class Posts extends Component {
                 />
                 </div>   
              </div>  
-              
               </> 
               
-            ) : (
-              <h3>Loading...</h3>
+              ) : (
+                // <h3>Loading...</h3>
+                <img src={loading_gif} className="Loading"></img>
             )}
             
              </>

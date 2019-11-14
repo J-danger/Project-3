@@ -8,13 +8,16 @@ import PrivateRoute from "./components/PrivateRoute";
 import Posts from "./pages/Posts"
 import Login from "./pages/Login"
 import Comments from "./pages/Comments"
+import loading_gif from "./loading.gif"
+import "./App.css"
 
 function App() {
   const { loading } = useAuth0();
 
   if (loading) {
     return (
-      <div>Loading...</div>
+      // <div>Loading...</div>
+      <img src={loading_gif} className="Loading" ></img>
     );
   }
 
