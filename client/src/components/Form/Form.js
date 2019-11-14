@@ -19,7 +19,10 @@ export function UserName(props){
 }
 
 const useStyles = makeStyles(theme => ({
-  root: {   
+  root: {  
+    '& label.Mui-focused': {
+      color: 'white',
+    }, 
     '& label': {
       color: 'white',
     },   
@@ -31,7 +34,7 @@ const useStyles = makeStyles(theme => ({
         borderColor: 'red',
       },
       '&:hover fieldset': {
-        borderColor: 'blue',
+        borderColor: 'white',
       },
       '&.Mui-focused fieldset': {
         borderColor: 'red',
