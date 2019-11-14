@@ -62,7 +62,7 @@ class Comments extends Component {
               {true ? (  
                   <>
                  
-                <div id="originalPost">
+                <div id="originalPost" className ="animated fadeInLeft fast" >
                 <div id="originalTitle">
                 <h3>{this.state.title}</h3>
                 </div>
@@ -70,7 +70,7 @@ class Comments extends Component {
                 <p>{this.state.body}</p>
                 </div>
                 </div>
-                <h3>Replies</h3>
+                
                 {this.state.comment.length ? ( 
                   <CommentList >                 
                  {this.state.comment.map(comment => (
@@ -88,7 +88,7 @@ class Comments extends Component {
                     
                 
                       
-                <div id="postForm">
+                <div id="postForm" className ="animated fadeInUp fast">
                 <div id="postContainer">
                 <CommentTextArea
                 value={this.state.cur_comment}

@@ -9,7 +9,7 @@ export default function List({ children }) {
   const { isAuthenticated } = useAuth0();
 
   return (
-<div id="wrapper">
+<div id="wrapper" className ="animated fadeInLeft fast" >
 
 {!isAuthenticated && (  
  <></>

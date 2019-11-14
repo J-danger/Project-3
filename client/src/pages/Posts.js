@@ -58,8 +58,8 @@ class Posts extends Component {
     render() {
         return(
           <>
-        <NavBar/>  
-        <h3>Current Discussions</h3>          
+        <NavBar/> 
+               <h3 className ="animated fadeInRight fast">Current Discussions</h3>          
             {this.state.posts.length ? (
               <>
               <List>
@@ -74,7 +74,7 @@ class Posts extends Component {
                   </ListItem>
                 ))}
               </List>   
-              <div id="postForm">  
+              <div id="postForm" className ="animated fadeInUp fast">  
               <div id="postContainer">
               <Input   
                 value={this.state.title}
@@ -93,11 +93,14 @@ class Posts extends Component {
                 onClick={this.handleFormSubmit}
                 />
                 </div>   
-             </div>   
+             </div>  
+              
               </> 
+              
             ) : (
               <h3>Loading...</h3>
             )}
+            
              </>
          
         )

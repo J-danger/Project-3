@@ -27,6 +27,10 @@ button:hover {
     
 }
 
+#login {
+  transition: all .2s ease-in-out;
+}
+
   body{
     font-family: 'Roboto', sans-serif;
   }
