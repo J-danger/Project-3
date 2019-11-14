@@ -16,5 +16,6 @@ router
 router
   .route("/:id/comment")  
   .put(postController.commentUpdate)
+  .get(postController.findById)
 
 module.exports = router;

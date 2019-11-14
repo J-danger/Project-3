@@ -13,7 +13,7 @@ class Posts extends Component {
     posts: [],
     title: "",    
     body: "",     
-    comment:[]
+    
    }
    
 
@@ -44,8 +44,7 @@ class Posts extends Component {
             API.savePost({
             title: this.state.title,
             body: this.state.body, 
-            user: this.state.user,
-            comment: []
+            user: this.state.user            
             // // this part might be wrong
             // user: this.state.user   
                  

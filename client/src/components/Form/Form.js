@@ -5,7 +5,7 @@ import "./Form.css"
 // This file exports the Input, TextArea, and FormBtn components
 
 export function UserName(props){
-  const { user } = useAuth0();
+ 
   return(
       <>
      <div className="form-group" {...props}>

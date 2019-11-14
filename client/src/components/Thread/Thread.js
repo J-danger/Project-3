@@ -7,7 +7,7 @@ import"./Thread.css"
 // This file exports both the List and ListItem components
 
 export default function CommentList({ children }) {
-  const { isAuthenticated, logout } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   return (
 <div id="wrapper">
