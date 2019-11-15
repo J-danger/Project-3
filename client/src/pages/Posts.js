@@ -58,9 +58,10 @@ class Posts extends Component {
     render() {
         return(
           <>
-        <NavBar/>                        
+        <NavBar/> 
             {this.state.posts.length ? (
               <>
+              <h3 className ="animated fadeInRight fast">Current Discussions</h3>          
               <List>
                 {this.state.posts.map(post => (
                   <ListItem key={post._id} data-attribute={post._id}>
