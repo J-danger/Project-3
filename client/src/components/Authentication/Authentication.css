@@ -20,14 +20,13 @@ button {
     font-family: fantasy;
     font-size: 25px;
     box-shadow: 0 1px 3px white, 0 1px 3px white; 
-    background: #00d8ff;
+    background: rgba(80, 77, 77, 0.555);
     color: white;
     text-shadow: 0 3px 6px black, 0 3px 6px black; 
 }
 
-button:hover {
-    background:white;   
-    color: #00d8ff; 
+button:hover {     
+    
     box-shadow: 0 3px 6px white, 0 3px 6px white; 
     
 }
@@ -53,7 +52,7 @@ button:hover {
     .react-logo{
       display: inline-block;
       border-radius:50%;
-      border:10px solid #00d8ff;  
+      /* border:10px solid #f5f5f5 ;   */
       animation-name:rotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
@@ -66,9 +65,8 @@ button:hover {
       display: inline-block;
       width:200px;
       height:70px;
-      border-radius:50%;
-      border:10px solid red;
-      box-shadow: 0 6px 6px red, 0 6px 6px red; 
+      border-radius:50%;      
+      box-shadow: 0 2px 4px #f5f5f5, 0 2px 4px whitesmoke; 
     }
   
     .nucleo , .react-logo , .react-logo:before , .react-logo:after {
