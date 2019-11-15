@@ -5,17 +5,16 @@
     animation-iteration-count: infinite;
   }
 
-#welcome {
-    color: white;
-    font-family: sans-serif;
-}
-#loginText{
+
+#loginText, #welcome, #description{
     color: white;
     font-family:sans-serif;
 }
 
+
+
 button {
-    padding: 20px;
+    padding: 10px;
     border: #00d8ff;
     font-family: fantasy;
     font-size: 25px;

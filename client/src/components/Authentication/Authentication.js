@@ -19,11 +19,12 @@ const NavBar = () => {
         </span>
       
         </div>     
-        <h1 className ="animated bounceInRight slow" id="welcome">Welcome to Stackunderflow</h1>
-        <h2 className ="animated bounceInLeft slow" id="loginText">Log in to continue</h2>
+        <h1 className ="animated bounceInRight slow" id="welcome">Welcome to Stack Underflow</h1>
+        <h4 className ="animated bounceInRight slow">Web Dev help forum for beginners</h4>
         <button className ="animated jackInTheBox slow" id="login" onClick={() =>loginWithRedirect({})}>
           Log in
         </button>
+        <h2 className ="animated bounceInLeft slow" id="loginText">Log in to continue</h2>
         </span>
       )}
 
