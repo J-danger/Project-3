@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Icon from '@material-ui/core/Icon';
 import { useAuth0 } from "../../react-auth0-spa";
 import "./Form.css"
 
@@ -53,9 +54,6 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     width: 400,
     
-  },
-  input: {
-    color: 'white'
   }
 }));
 
@@ -81,8 +79,7 @@ export function Input(props) {
          marginRight: 8,
          width: 400
          }}
-       fullWidth    
-       
+       fullWidth          
        {...props} 
        />
        </div> 
@@ -112,13 +109,11 @@ export function PostTextArea(props) {
           rows="10"         
           className={classes.textField}
           margin="normal"
-          variant="outlined"  
-          
+          variant="outlined"            
           {...props} 
           />     
       </form>
-      </div>
-      
+      </div>      
       }
     </div>
   );
@@ -134,7 +129,7 @@ export function CommentTextArea(props) {
       }
       {isAuthenticated &&
       <div>       
-      <form className={classes.root} id="textForm" noValidate autoComplete="off">
+      <form className={classes.root} id="commentForm" noValidate autoComplete="off">
         <TextField 
           id="standard-error"
           label="Body"
@@ -146,8 +141,7 @@ export function CommentTextArea(props) {
           {...props} 
           />     
       </form>
-      </div>
-      
+      </div>      
       }
     </div>
   );
@@ -155,6 +149,7 @@ export function CommentTextArea(props) {
 
 export function FormBtn(props) {
   const { isAuthenticated } = useAuth0();
+  const classes = useStyles();
   return (
     <div className="submitContainer">
       {!isAuthenticated && 
@@ -162,7 +157,13 @@ export function FormBtn(props) {
       }
       {isAuthenticated &&
      
-      <button id="submitPost" {...props} style={{ float: "none", marginBottom: 10 }} className="btn btn-success" >
+      <button 
+      id="submitPost" 
+      {...props} 
+      style={{ 
+        float: "none", 
+        marginBottom: 10 }} 
+        className={classes.button}>
         Submit
       </button>
      

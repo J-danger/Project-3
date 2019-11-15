@@ -3,6 +3,16 @@
     box-shadow: 0 3px 6px black, 0 3px 6px black; 
     border: 1px #393e46 solid;
     margin: 0px 5px 20px 5px;
+    overflow-wrap: break-word;
+}
+
+#originalTitle {
+    margin-left: 15px;
+    
+}
+#originalBody {
+    margin-left: 20px;
+    
 }
 
 
@@ -10,7 +20,7 @@
     margin-top: 30px;
     /* box-shadow: 0 3px 6px black, 0 3px 6px black; 
     border: 1px #393e46 solid; */
-    background: #222831;
+    background: black;
     margin-bottom: 15px;  
     border: none;
     text-align: center
