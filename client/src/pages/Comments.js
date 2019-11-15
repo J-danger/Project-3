@@ -100,7 +100,8 @@ class Comments extends Component {
                 </div>
                 </>
               ) : (
-                <>Loading...</> 
+                // <>Loading...</> 
+                <img src={`${process.env.PUBLIC_URL}/img/loading.gif`} className="Loading" ></img>
               )}
             </>
           )

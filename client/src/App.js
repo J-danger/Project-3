@@ -14,7 +14,8 @@ function App() {
 
   if (loading) {
     return (
-      <div>Loading...</div>
+      // <div>Loading...</div>
+      <img src={`${process.env.PUBLIC_URL}/img/loading.gif`} className="Loading" ></img>
     );
   }
 
