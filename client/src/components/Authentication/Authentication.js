@@ -21,7 +21,7 @@ const NavBar = () => {
         </div>     
           
           <h1 className ="animated bounceInRight slow" id="welcome">
-            Welcome to Stack Underflow
+          Welcome to <span className="stack">Stack</span><span className="underFlow">Underflow </span>
           </h1>
           <h4 className ="animated rotateInUpLeft slow" id="description">
             Web Dev help forum for beginners
@@ -29,9 +29,7 @@ const NavBar = () => {
         <button className ="animated rotateInUpRight slow" id="login" onClick={() =>loginWithRedirect({})}>
             Log in
         </button>
-          <h2 className ="animated bounceInLeft slow" id="loginText">
-            Log in to continue
-          </h2>
+          
         </span>
       )}
 
