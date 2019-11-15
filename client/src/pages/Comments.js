@@ -83,7 +83,7 @@ class Comments extends Component {
                      <p className ="animated fadeInRight fast">Be the first to comment!</p>
                    )}
                    
-                <div id="postForm" className ="animated fadeInUp fast">
+                <div id="postForm" className ="animated fadeInRight fast">
                 <div id="postContainer">
                 <CommentTextArea
                 value={this.state.cur_comment}                
@@ -100,7 +100,7 @@ class Comments extends Component {
                 </div>
                 </>
               ) : (
-                <></> 
+                <>Loading...</> 
               )}
             </>
           )

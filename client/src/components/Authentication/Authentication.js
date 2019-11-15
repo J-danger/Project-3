@@ -14,17 +14,24 @@ const NavBar = () => {
       {!isAuthenticated && (
         <span>
         <div className="container">
-        <span className="react-logo">
-          <span className="nucleo"></span>
-        </span>
-      
+          
+          <span className="react-logo">
+            <span className="nucleo"></span>
+          </span>
         </div>     
-        <h1 className ="animated bounceInRight slow" id="welcome">Welcome to Stack Underflow</h1>
-        <h4 className ="animated bounceInRight slow">Web Dev help forum for beginners</h4>
-        <button className ="animated jackInTheBox slow" id="login" onClick={() =>loginWithRedirect({})}>
-          Log in
+          
+          <h1 className ="animated bounceInRight slow" id="welcome">
+            Welcome to Stack Underflow
+          </h1>
+          <h4 className ="animated rotateInUpLeft slow" id="description">
+            Web Dev help forum for beginners
+          </h4>
+        <button className ="animated rotateInUpRight slow" id="login" onClick={() =>loginWithRedirect({})}>
+            Log in
         </button>
-        <h2 className ="animated bounceInLeft slow" id="loginText">Log in to continue</h2>
+          <h2 className ="animated bounceInLeft slow" id="loginText">
+            Log in to continue
+          </h2>
         </span>
       )}
 
