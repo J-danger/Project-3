@@ -20,7 +20,7 @@ const Profile = () => {
       <div id="profileWrapper" className ="animated rotateInUpRight fast">
       <img src={user.picture} id="UserImage" alt="Profile" height="200px" width="200px" className ="animated fadeInUp slow" />
       <div id="userInfo" className ="animated fadeInRight slow">
-      <h2>User Name: {user.name}</h2>
+      <h3>User Name: {user.name}</h3>
       <h3>Email: {user.email}</h3>      
       </div>
       </div>
