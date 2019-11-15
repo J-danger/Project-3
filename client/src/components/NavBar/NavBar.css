@@ -6,7 +6,7 @@
     box-shadow: 2px 2px black, 2px 2px black;  
     font-size: 20px;
     transition: all .2s ease-in-out;
-    
+    border-radius: 2px;
 }
 
 .logout:hover{
@@ -47,16 +47,12 @@
     float: right;
     margin: 0px 30px 0px 0px;
     font-size: 25px;
-    color: white;
-    
+    color: white;    
 }
 
-#userImage {
-    float: right;   
-    
+img {
+    border-radius: 50%
 }
 
-#userInfo {
-    float: right;
-}
+
 

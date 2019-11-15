@@ -6,8 +6,10 @@
     
 }
 
-#postContainer:not(h3) {
-    margin-left: 20px;
+#submitPost {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
 }
 
 #PostTextArea {
