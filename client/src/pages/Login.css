@@ -14,14 +14,15 @@
 h2 {
     color: black
 }
-
-
-
-
-
-
 .linkToJava {
     color:yellow    
+}
+.linkToReact{
+    color: rgb(0,216, 255)
+}
+
+.linkToReact:hover{
+    color:  yellow
 }
 
 #html{
@@ -32,9 +33,15 @@ h2 {
     color: rgb(21, 114, 182)
 }
 
-.linkToReact{
-    color: rgb(0,216, 255)
+#html:hover{
+    color: rgb(21, 114, 182) 
 }
+
+#css:hover{
+    color: rgb(228, 79, 38)
+}
+
+
 .card{
     width: 200px;
     background: black;      
