@@ -4,6 +4,7 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const keys = require("./config")
+require("dotenv").config()
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -16,8 +17,8 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-console.log(keys.mongodbURI)
-mongoose.connect(keys.mongodbURI, 
+console.log(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, 
 {
     useNewUrlParser: true,
     useUnifiedTopology: true

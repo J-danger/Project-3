@@ -1,3 +1,25 @@
 #wrapper {
     color: white;
 }
+
+.card {
+    background: white;
+    width: 150px;
+}
+
+.cardButton {
+    background:gray
+}
+
+h2 {
+    color: black
+}
+
+
+img {
+    border-radius: 0;
+}
+
+.linksToPosts {
+    color: black;
+}
