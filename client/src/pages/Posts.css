@@ -10,6 +10,12 @@
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 2px;
+    background: #00ACE9
+}
+
+#submitPost:hover {
+  background: rgb(5, 117, 5);   
+  color: white
 }
 
 #PostTextArea {

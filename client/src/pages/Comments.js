@@ -80,7 +80,7 @@ class Comments extends Component {
                    ))}
                    </CommentList>
                    ) : (
-                     <p>Be the first to comment!</p>
+                     <p className ="animated fadeInRight fast">Be the first to comment!</p>
                    )}
                    
                 <div id="postForm" className ="animated fadeInUp fast">

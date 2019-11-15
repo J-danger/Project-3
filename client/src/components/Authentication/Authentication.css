@@ -5,11 +5,13 @@
     animation-iteration-count: infinite;
   }
 
-h1 {
+#welcome {
     color: white;
+    font-family: sans-serif;
 }
-h2{
+#loginText{
     color: white;
+    font-family:sans-serif;
 }
 
 button {
@@ -19,11 +21,13 @@ button {
     font-size: 25px;
     box-shadow: 0 3px 6px #ff0000, 0 3px 6px #ff0000; 
     background: #ff0000;
+    color: white;
 }
 
 button:hover {
     background:white;   
     color: #ff0000; 
+    box-shadow: 0 3px 6px white, 0 3px 6px white; 
     
 }
 

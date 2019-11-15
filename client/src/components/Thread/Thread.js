@@ -12,7 +12,7 @@ export default function CommentList({ children }) {
   return (
 
     
-<div id="wrapper"  className ="animated flipInY fast">
+<div id="wrapper"  className ="animated fadeIn slow">
 
 {!isAuthenticated && (  
  <></>

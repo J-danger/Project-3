@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     '& label.Mui-focused': {
       color: 'white',
     }, 
+    '&:hover fieldset': {
+      borderColor: 'yellow',
+    },
     '& label': {
       color: 'white',
     },   
@@ -36,12 +39,12 @@ const useStyles = makeStyles(theme => ({
         
       },
       '&:hover fieldset': {
-        borderColor: 'white',
+        borderColor: 'orange',
       },
       '&.Mui-focused fieldset': {
         borderColor: 'red',
         textColor: 'white'
-      }    
+      }         
     },
   },
   container: {
@@ -56,6 +59,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
 export function Input(props) {
   const { isAuthenticated } = useAuth0();
   var classes = useStyles();
@@ -65,8 +69,7 @@ export function Input(props) {
      <></>
     }
     {isAuthenticated && 
-     <>
-     
+     <>     
      <div className="form-group">   
      <div id="titleField">
        <TextField 
@@ -78,14 +81,14 @@ export function Input(props) {
          marginRight: 8,
          width: 400
          }}
-       fullWidth          
+       fullWidth
+       variant="outlined"
        {...props} 
        />
        </div> 
      </div>
      </>
     }
-
     </div>  
   );
 }
@@ -147,8 +150,7 @@ export function CommentTextArea(props) {
 }
 
 export function FormBtn(props) {
-  const { isAuthenticated } = useAuth0();
-  const classes = useStyles();
+  const { isAuthenticated } = useAuth0();  
   return (
     <div className="submitContainer">
       {!isAuthenticated && 
@@ -161,12 +163,9 @@ export function FormBtn(props) {
       style={{ 
         float: "none", 
         marginBottom: 10 }} 
-        className={classes.button}>
+        className="submitButton">
         Submit
-      </button>
-     
-      
-
+      </button>         
       }
     </div>
   );
