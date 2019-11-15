@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Icon from '@material-ui/core/Icon';
 import { useAuth0 } from "../../react-auth0-spa";
 import "./Form.css"
 
@@ -155,8 +154,7 @@ export function FormBtn(props) {
       {!isAuthenticated && 
       <></>
       }
-      {isAuthenticated &&
-     
+      {isAuthenticated &&     
       <button 
       id="submitPost" 
       {...props} 
