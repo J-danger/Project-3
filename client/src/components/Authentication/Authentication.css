@@ -31,7 +31,7 @@ button {
     padding: 10px;
     border: #00d8ff;
     font-family: fantasy;
-    font-size: 25px;
+    font-size: 20px;
     box-shadow: 0 1px 3px white, 0 1px 3px white; 
     background: rgba(80, 77, 77, 0.555);
     color: white;
@@ -68,7 +68,7 @@ button:hover {
       border-radius:50%;
       /* border:10px solid #f5f5f5 ;   */
       animation-name:rotate;
-      animation-duration: 5s;
+      animation-duration: 45s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
   
@@ -80,7 +80,7 @@ button:hover {
       width:200px;
       height:70px;
       border-radius:50%;      
-      box-shadow: 0 2px 4px #f5f5f5, 0 2px 4px whitesmoke; 
+      box-shadow: 0 4px 4px #e25822, 0 2px 8px #3b51cc; 
     }
   
     .nucleo , .react-logo , .react-logo:before , .react-logo:after {
@@ -90,11 +90,11 @@ button:hover {
     }
   
     .nucleo{
-      width:30px;
-      height:30px;
+      width:60px;
+      height:60px;
       border-radius:100%;
       background:black;
-      box-shadow:6px 1px 6px white, 6px 1px 6px white;
+      box-shadow:6px 1px 6px #10316b, 6px 1px 6px white;
        
       
     }

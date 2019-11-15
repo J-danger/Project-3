@@ -28,8 +28,7 @@ const NavBar = () => {
           </h4>
         <button className ="animated rotateInUpRight slow" id="login" onClick={() =>loginWithRedirect({})}>
             Log in
-        </button>
-          
+        </button>          
         </span>
       )}
 
