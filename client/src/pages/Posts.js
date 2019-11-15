@@ -58,8 +58,7 @@ class Posts extends Component {
     render() {
         return(
           <>
-        <NavBar/> 
-               <h3 className ="animated fadeInRight fast">Current Discussions</h3>          
+        <NavBar/>                        
             {this.state.posts.length ? (
               <>
               <List>
