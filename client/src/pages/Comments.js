@@ -4,6 +4,7 @@ import { CommentTextArea, FormBtn } from "../components/Form/Form";
 import API from "../utils/API";
 import CommentList from "../components/Thread/Thread.js"
 import CommentListItem from "../components/Thread/Thread.js"
+import  "./Comments.css"
 
 class Comments extends Component {
     state ={
@@ -49,6 +50,7 @@ class Comments extends Component {
            comment: this.state.comment
            })
            this.loadComments()
+           
        }
     };   
 
@@ -56,37 +58,49 @@ class Comments extends Component {
           return(
               <>   
               <NavBar />   
-              {this.state.comment.length ? (  
+              
+              {true ? (  
                   <>
-                <h3>{this.state.title}</h3>
-                <p>{this.state.body}</p>
-                <p>Replies</p>
-
-              <CommentList >
                  
-              {this.state.comment.map(comment => (
-                  <CommentListItem key={comment._id} data-attribute={comment._id}>                   
-                       {comment}
-                  </CommentListItem>
-                ))}
-                    
+                <div id="originalPost" className ="animated fadeInLeft fast" >
+                <div id="originalTitle">
+                <h3>{this.state.title}</h3>
+                </div>
+                <div id="originalBody">
+                <p>{this.state.body}</p>
+                </div>
+                </div>
                 
-                      
-              </CommentList>
-
+                {this.state.comment.length ? ( 
+                  <CommentList >                 
+                 {this.state.comment.map(comment => (
+                     <CommentListItem key={comment._id} data-attribute={comment._id}>                                        
+                          {comment}
+                     </CommentListItem>
+                   ))}
+                   </CommentList>
+                   ) : (
+                     <p className ="animated fadeInRight fast">Be the first to comment!</p>
+                   )}
+                   
+                <div id="postForm" className ="animated fadeInRight fast">
+                <div id="postContainer">
                 <CommentTextArea
-                value={this.state.cur_comment}
+                value={this.state.cur_comment}                
                 onChange={this.handleInputChange}
                 name="cur_comment"
-                placeholder="Reply here"
+                placeholder=""
+                returnKeyType="go"
                  />
                 <FormBtn 
                 disabled={!(this.state.comment)}
                 onClick={this.handleFormSubmit}
                 />
+                </div>
+                </div>
                 </>
               ) : (
-                <h3>Loading...</h3>  
+                <>Loading...</> 
               )}
             </>
           )

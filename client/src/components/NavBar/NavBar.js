@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     
-    <div id="wrapper">
+    <div id="NavBar">
 
       {!isAuthenticated && (
         
@@ -33,9 +33,9 @@ const Header = () => {
                 <User />
               </div>                         
           <div id="links">
-            <Link to="/" className="links">Home</Link>&nbsp;
-            <Link to="/posts" className="links">Discussions</Link>&nbsp;
-            <Link to="/profile" className="links">Profile</Link>
+            <Link to="/" className="links" >Home</Link>&nbsp;
+            <Link to="/posts" className="links" >Discussions</Link>&nbsp;
+            
           </div>
             </div>
           

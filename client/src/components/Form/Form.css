@@ -12,11 +12,21 @@
     font-size: 20px;
 }
 
-textarea {
-    width: 400px;
-    margin-bottom: 5px;
+
+
+#submitPost {
+    background: grey;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
 }
 
-input {
-    width: 400px;
+#standard-secondary{
+    margin-bottom: 10px;
+}
+
+
+
+#standard-error, #standard-full-width {
+    color: white;
 }

@@ -1,9 +1,10 @@
 
 import React from "react";
 import { useAuth0 } from "../react-auth0-spa";
-import Authentication from "../components/Authentication/Authentication";
-import NavBar from "../components/NavBar/NavBar";
 import logo from "./logo512.png";
+import Authentication from "../components/Authentication/Authentication"
+import NavBar from "../components/NavBar/NavBar"
+import "./Login.css"
 
 export function Login ({ children }) {
   const { isAuthenticated } = useAuth0();  
@@ -36,7 +37,7 @@ export function Login ({ children }) {
               <li>Basic JavaScript</li>
               <li>And much much more!</li>
               </ul>
-              <img src={logo} alt={logo} style={{position:"relative", left:"500px"}} />
+              <img src={logo} alt={logo} style={{position:"relative", left:"700px", bottom:"350px"}} />
       </span>
     )}
     </div>  

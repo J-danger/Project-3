@@ -5,25 +5,48 @@
     animation-iteration-count: infinite;
   }
 
-h1 {
-    color: white;
+
+#welcome, #description{
+    color: #ececeb;
+    font-family: monospace;
+     
 }
-h2{
-    color: white;
+
+
+.stack{
+  color: #10316b;
+  text-shadow: 0 1px 2px #000000, 0 1px 2px rgb(31, 30, 30);
+  font-family: monospace;
+  font-size: 1.5em
 }
+.underFlow{
+  color: #e25822;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 0.9em
+}
+
 
 button {
-    padding: 20px;
+    padding: 10px;
     border: #00d8ff;
     font-family: fantasy;
-    font-size: 25px;
-    box-shadow: 0 3px 6px #00d8ff, 0 3px 6px #00d8ff; 
-    background: white;
+    font-size: 20px;
+    box-shadow: 0 1px 3px white, 0 1px 3px white; 
+    background: rgba(80, 77, 77, 0.555);
+    color: white;
+    text-shadow: 0 3px 6px black, 0 3px 6px black; 
 }
 
-button:hover {
-    background:#00d8ff;    
+button:hover {     
+    color: #000000;
+    background: #ececeb;
+    box-shadow: 0 3px 6px white, 0 3px 6px white; 
     
+}
+
+#login {
+  transition: all .2s ease-in-out;
 }
 
   body{
@@ -33,7 +56,7 @@ button:hover {
       width:250px;
       height:250px;
       margin:20px auto 0 auto;
-      background:#222;
+      background:black;
   
       display:flex;
       align-items: center;
@@ -43,10 +66,9 @@ button:hover {
     .react-logo{
       display: inline-block;
       border-radius:50%;
-      border:10px solid #00d8ff;
-  
+      /* border:10px solid #f5f5f5 ;   */
       animation-name:rotate;
-      animation-duration: 5s;
+      animation-duration: 45s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
   
@@ -56,9 +78,9 @@ button:hover {
       position:absolute;
       display: inline-block;
       width:200px;
-      height:70px;
-      border-radius:50%;
-      border:10px solid #00d8ff;
+      height:110px;
+      border-radius:50%;      
+      box-shadow: 0 4px 4px #e25822, 0 2px 8px #3b51cc; 
     }
   
     .nucleo , .react-logo , .react-logo:before , .react-logo:after {
@@ -68,10 +90,13 @@ button:hover {
     }
   
     .nucleo{
-      width:40px;
-      height:40px;
+      width:60px;
+      height:60px;
       border-radius:100%;
-      background:#00d8ff;
+      background:black;
+      box-shadow:6px 1px 6px #10316b, 6px 1px 6px white;
+       
+      
     }
   
     .react-logo:before , .react-logo:after{

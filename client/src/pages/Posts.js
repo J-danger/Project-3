@@ -3,10 +3,11 @@ import API from "../utils/API"
 import NavBar from "../components/NavBar/NavBar"
 import List from "../components/List/List.js"
 import ListItem from "../components/List/List.js"
-import { Input, PostTextArea, FormBtn, UserName } from "../components/Form/Form";
+import { Input, PostTextArea, FormBtn } from "../components/Form/Form";
 import { Link } from "react-router-dom";
+import "./Posts.css"
 
-console.log(UserName)
+
 
 class Posts extends Component {
    state = {
@@ -58,9 +59,10 @@ class Posts extends Component {
     render() {
         return(
           <>
-        <NavBar/>            
+        <NavBar/> 
             {this.state.posts.length ? (
               <>
+              <h3 className ="animated fadeInRight fast">Current Discussions</h3>          
               <List>
                 {this.state.posts.map(post => (
                   <ListItem key={post._id} data-attribute={post._id}>
@@ -72,28 +74,38 @@ class Posts extends Component {
                                   
                   </ListItem>
                 ))}
-              </List>             
+              </List>   
+              <div id="postForm" className ="animated fadeInUp fast">  
+              <div id="postContainer">
+              <div id="Input">
               <Input   
                 value={this.state.title}
                 onChange={this.handleInputChange}
                 name="title"
-                placeholder="Title (required)"
+                placeholder=""
                 />
+                </div>
+                <div id="PostTextArea">
               <PostTextArea  
                 value={this.state.body}
                 onChange={this.handleInputChange}
                 name="body"
-                placeholder="What do you want to say? (required)"
+                placeholder=""
                 />
+                </div>
               <FormBtn 
                 disabled={!(this.state.title && this.state.body)}
                 onClick={this.handleFormSubmit}
                 />
-             
+                </div>   
+             </div>  
+              
               </> 
+              
             ) : (
               <h3>Loading...</h3>
             )}
+            
              </>
          
         )

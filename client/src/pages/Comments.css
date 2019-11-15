@@ -1,0 +1,83 @@
+#originalPost {
+    background: #222831;
+    box-shadow: 0 3px 6px black, 0 3px 6px black; 
+    border: 1px #393e46 solid;
+    margin: 0px 5px 20px 5px;
+    overflow-wrap: break-word;
+}
+
+#originalTitle {
+    margin-left: 15px;
+    
+}
+#originalBody {
+    margin-left: 20px;
+    
+}
+
+
+#postForm {
+    margin-top: 30px;
+    /* box-shadow: 0 3px 6px black, 0 3px 6px black; 
+    border: 1px #393e46 solid; */
+    background: black;
+    margin-bottom: 15px;  
+    border: none;    
+    
+}
+
+#postContainer:not(h3) {    
+    margin-top: 15px;
+}
+
+
+@media only screen and (max-width: 400px){ 
+    #postForm  {       
+        width: 100%;
+    }
+    }
+
+@media only screen and (max-width: 500px){ 
+    #postForm  {
+        width: 100%;
+    }
+    }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){ 
+    #postForm  {
+        width: 100%;
+    }
+    }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+{
+    #postForm  {
+        width: 80%;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+{
+    #postForm  {
+        width: 55%;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{  #postForm  {
+    width: 45%;
+}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 
+{ #postForm  {
+    width: 40%;
+}
+}
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) 
+{#postForm  {
+    width: 35%;
+}
+
+}

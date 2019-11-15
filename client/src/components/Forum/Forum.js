@@ -17,7 +17,7 @@ export function Forum ({ children }) {
       )}      
       {isAuthenticated && (
         <span>         
-              <List />              
+              <List />      
             
       </span>
     )}

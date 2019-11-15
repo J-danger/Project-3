@@ -1,0 +1,81 @@
+#postForm {
+    margin-top: 30px;
+    box-shadow: 0 3px 6px black, 0 3px 6px black; 
+    border: 1px #393e46 solid;
+    background: #26282b;
+    
+}
+
+#submitPost {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: #00ACE9
+}
+
+#submitPost:hover {
+  background: rgb(5, 117, 5);   
+  color: white
+}
+
+#PostTextArea {
+    margin: 15px 0 10px 0
+
+}
+
+#Input {
+    margin-left: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 400px){ 
+    #postForm  {       
+        width: 100%; 
+    }
+    }
+
+@media only screen and (max-width: 500px){ 
+    #postForm  {
+        width: 100%;
+    }
+    }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){ 
+    #postForm  {
+        width: 100%;
+    }
+    }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+{
+    #postForm  {
+        width: 80%;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+{
+    #postForm  {
+        width: 55%;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{  #postForm  {
+    width: 45%;
+}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 
+{ #postForm  {
+    width: 40%;
+}
+}
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) 
+{#postForm  {
+    width: 30%;
+}
+}

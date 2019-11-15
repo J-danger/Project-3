@@ -1,17 +1,18 @@
 .logout {
     padding: 5px;    
     float: right;
-    background: black;
-    color: white;
-    box-shadow: 0 2px 2px black, 0 2px 2px black;      
     background: #00ACE9;
+    color: white;
+    box-shadow: 2px 2px black, 2px 2px black;  
     font-size: 20px;
+    font-family: sans-serif;
     transition: all .2s ease-in-out;
-    
+    border-radius: 2px;
 }
 
 .logout:hover{
-   background: #D43F3F;
+   background: red;
+   color: white;
 }
 
 #container {
@@ -33,25 +34,53 @@
 }
 
 #authenticatedHeader {
-    background: #404040;    
+    background: #393e46;    
     padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 1px 2px black, 1px 2px black   
     
 }
+ a {
+    text-decoration: none;
+ }
 
 #user {
     float: right;
     margin: 0px 30px 0px 0px;
     font-size: 25px;
-    color: white;
-    
+    color: white;    
 }
 
-#userImage {
-    float: right;   
-    
+img {
+    border-radius: 50%
 }
 
-#userInfo {
-    float: right;
-}
+
+
+
+@media only screen and (max-width: 426px){ 
+    #user  {       
+        display: none;
+        
+    }
+    #container{
+        margin-bottom: 50px;
+    }
+    }
+
+@media only screen and (max-width: 500px){ 
+    #user  {
+        display: none;
+    }
+    }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 685px){ 
+    #user  {
+        display: none;
+    }
+    }
+
+
+
+
+
