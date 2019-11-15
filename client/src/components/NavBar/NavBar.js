@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     
-    <div id="wrapper">
+    <div id="NavBar">
 
       {!isAuthenticated && (
         

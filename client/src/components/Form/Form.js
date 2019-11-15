@@ -28,11 +28,7 @@ const useStyles = makeStyles(theme => ({
     },
     '& label': {
       color: 'white',
-    },   
-    '& .MuiInput-underline:after': {
-      borderBottomColor: 'red',
-      color: 'white'
-    },
+    },      
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: 'white',
@@ -54,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 400,
+    width: 350,
     
   }
 }));
@@ -79,7 +75,7 @@ export function Input(props) {
        color="secondary"  
        style={{ 
          marginRight: 8,
-         width: 400
+         width: 350
          }}
        fullWidth
        variant="outlined"
@@ -134,7 +130,7 @@ export function CommentTextArea(props) {
       <form className={classes.root} id="commentForm" noValidate autoComplete="off">
         <TextField 
           id="standard-error"
-          label="Body"
+          label="Reply"
           multiline
           rows="10"         
           className={classes.textField}

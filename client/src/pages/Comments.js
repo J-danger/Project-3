@@ -100,7 +100,7 @@ class Comments extends Component {
                 </div>
                 </>
               ) : (
-                <h3>Loading...</h3>  
+                <></> 
               )}
             </>
           )

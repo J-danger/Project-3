@@ -30,13 +30,13 @@
 
 @media only screen and (max-width: 400px){ 
     #postForm  {       
-        
+        width: 100%; 
     }
     }
 
 @media only screen and (max-width: 500px){ 
     #postForm  {
-        
+        width: 100%;
     }
     }
 /* Extra small devices (phones, 600px and down) */

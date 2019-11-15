@@ -57,3 +57,30 @@ img {
 
 
 
+
+@media only screen and (max-width: 426px){ 
+    #user  {       
+        display: none;
+        
+    }
+    #container{
+        margin-bottom: 50px;
+    }
+    }
+
+@media only screen and (max-width: 500px){ 
+    #user  {
+        display: none;
+    }
+    }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 685px){ 
+    #user  {
+        display: none;
+    }
+    }
+
+
+
+
+
