@@ -28,17 +28,20 @@ const useStyles = makeStyles(theme => ({
     },   
     '& .MuiInput-underline:after': {
       borderBottomColor: 'red',
+      color: 'white'
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: 'white',
+        
       },
       '&:hover fieldset': {
         borderColor: 'white',
       },
       '&.Mui-focused fieldset': {
         borderColor: 'red',
-      },     
+        textColor: 'white'
+      }    
     },
   },
   container: {
@@ -51,6 +54,9 @@ const useStyles = makeStyles(theme => ({
     width: 400,
     
   },
+  input: {
+    color: 'white'
+  }
 }));
 
 export function Input(props) {
@@ -64,14 +70,22 @@ export function Input(props) {
     {isAuthenticated && 
      <>
      
-     <div className="form-group">    
+     <div className="form-group">   
+     <div id="titleField">
        <TextField 
        className={classes.root} 
-       id="standard-error" 
+       id="standard-full-width" 
        label="Title" 
-       color="secondary"        
+       color="secondary"  
+       style={{ 
+         marginRight: 8,
+         width: 400
+         }}
+       fullWidth    
+       
        {...props} 
        />
+       </div> 
      </div>
      </>
     }
@@ -112,25 +126,27 @@ export function PostTextArea(props) {
 
 export function CommentTextArea(props) {
   const { isAuthenticated } = useAuth0();
- 
+  const classes = useStyles();
   return (
     <div className="formContainer">
       {!isAuthenticated && 
       <></>
       }
       {isAuthenticated &&
-      <>      
-    <div className="form-group">
-      <textarea 
-      className="form-control" 
-      rows="10" 
-      wrap="off" 
-      {...props} 
-      />   
-
-      
-    </div>
-    </>
+      <div>       
+      <form className={classes.root} id="textForm" noValidate autoComplete="off">
+        <TextField 
+          id="standard-error"
+          label="Body"
+          multiline
+          rows="10"         
+          className={classes.textField}
+          margin="normal"
+          variant="outlined"            
+          {...props} 
+          />     
+      </form>
+      </div>
       
       }
     </div>

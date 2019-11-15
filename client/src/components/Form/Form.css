@@ -12,14 +12,7 @@
     font-size: 20px;
 }
 
-textarea {
-    width: 400px;
-    margin-bottom: 5px;
-}
 
-input {
-    width: 400px;
-}
 
 #submitPost {
     background: grey;
@@ -32,6 +25,8 @@ input {
     margin-bottom: 10px;
 }
 
-#textField {
-    margin-top: 10px;
+
+
+#standard-error, #standard-full-width {
+    color: white;
 }
